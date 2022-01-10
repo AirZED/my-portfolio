@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root{
+    --important: rgb(3, 25, 47);
+    --bg: rgb(7, 35, 64);
+    --main-color: #ccc;
+    --border: .2rem solid rgb(3, 141, 139);
+}
+*{
+    font-family: Georgia, serif;
+}
+
+html{
+
+    font-size: 80%;
+    overflow-x: hidden;
+    scroll-padding-block-start: 5rem;
+    scroll-behavior: smooth;
+}
+section{
+    width: 90%;
+    margin: auto auto;
+    display: block;
+    padding: 2rem;
+    position: relative;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+    color: var(--main-color);
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #ccc ;
+    border-radius: .3rem;
+}
+body{
+    background: var(--bg);
+    width: 100vw;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+#menu-btn{
+    display: none;
+}
+.btn{
+    padding: .5rem 1rem;
+    cursor: pointer;
+    border: var(--border);
+    border-radius: .7rem;
+    font-size: 1.5rem;
+    background: var(--bg);
+    color: var(--main-color);
+}
+.btn:hover{
+    letter-spacing: .1rem;
+    background: var(--main-color);
+    color: black;
+    transition: .3s linear;
+}
+
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background:var(--bg);
+    padding: 1rem 4rem;
+    top: 0; right: 0; left: 0;
+    height: 7rem;
+    z-index: 1000;
+    border-bottom: var(--border);
+}
+.header .logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    block-size: 7rem;
+    inline-size: 7rem;
+    background: rgb(3, 141, 139);
+}
+.header .logo-container .logo{
+    padding: 3rem;
+}
+.header .logo-container h1{
+    font-size: 3rem;
+    color: var(--bg);
+}
+
+.header .nav-bar a{
+    color: var(--main-color);
+    font-size: 1.5rem;
+    margin: .7rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.header .nav-bar a:hover{
+    border-bottom: var(--border);
+    padding-bottom: .8rem;
+    color: rgb(3, 141, 139);
+    transition: .3s linear;
+}
+
+.header .nav-bar .btn{
+    margin-inline-start: 3rem;
+}
+
+.about{
+    position: relative;
+    display: flex;
+    background-color: var(--bg);
+    gap: 3rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;  
+}
+
+.about .icon-container{
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    align-items: flex-end;
+    flex: 0;
+    position: fixed;
+}
+
+
+.about .icon-container a{
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--main-color);
+    padding: 3rem 0;
+}
+
+.about .icon-container a:hover{
+    color: rgb(3, 141, 139);
+}
+.about .about-container{
+    min-width: 32rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
+    flex: 2;
+}
+
+.about .about-container h3{
+    font-size: 6rem;
+    color: var(--main-color);
+}
+
+.about .about-container p span{
+    color: rgb(3, 141, 139);
+}
+.about .about-container p{
+    color: var(--main-color);
+    font-size: 1.5rem;
+}
+.about .image-container{
+    min-width: 24rem;
+    min-height: 35rem;
+    border-radius: 20%;
+    padding: 3rem;
+    place-content: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.about .image-container:hover{
+    transform: scale(1.3);
+ }
+
+ .about .image-container img{
+    width: 24rem;
+    height: 35rem;
+    border-radius: 25%;
+ }
+section h1{
+    padding: 3rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    color: var(--main-color);
+    font-family: 'Times New Roman', Times, serif;
+ }
+.projects{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: auto auto;
+}
+
+.project-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40rem;
+    padding: 0;
+}
+
+.projects .project-container .project-img{
+    width: 38rem;
+    height: 38rem;
+    margin: 2rem;
+    background: rgb(2, 59, 58);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects .project-container .project-img img{
+    width: 35rem;
+    height: 35rem;
+    padding: auto;
+}
+/*projects about*/
+
+.project-container .project-about{
+    max-width: 50rem;
+    min-width: 32rem;
+    padding: 2rem;
+    border: var(--border);
+    background: var(--important);
+    text-align: right;
+    font-size: 1rem;
+    font-weight: lighter;
+    color: var(--main-color);
+}
+
+.project-container .project-about:hover{
+    transform: scale(1.3);
+}
+
+.project-container .project-about .topic{
+    color: rgb(3, 141, 139);
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    margin-bottom: 4rem;
+    border-bottom: var(--border);
+    border-right: var(--border);
+    padding: .4rem;
+    text-align: left;
+    display: inline-block;
+}
+
+.project-container .project-about a{
+    text-decoration: none;
+    font-size: .8rem;
+    
+}
+
+.project-container .project-about .fa-github{
+    padding: .5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: rgb(3, 141, 139);
+}
+
+.project-container .project-about .fa-github:hover{
+    color: var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:750px){
+
+    #menu-btn{
+        display: block;
+        font-size: 2rem;
+        color: rgb(3, 141, 139);
+        padding: 1.5rem;
+        
+    }
+    #menu-btn:hover{
+        color: var(--main-color);
+    }
+    .header .logo-container{
+        block-size: 5rem;
+        inline-size: 5rem;
+    }
+    .header .logo-container .logo{
+        padding: 1.5rem;
+    }
+    .header .logo-container h1{
+        font-size: 2rem;
+    }
+
+    .header{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        border-bottom: none;
+        flex-direction: column;
+        width: 100vw;
+        margin: auto auto;
+        justify-content: space-between;
+        padding: 1rem 0rem;
+        margin: 0;
+        border-bottom: var(--border);
+        height: 5rem;
+
+    }
+
+    .header .nav-bar{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: var(--bg);
+        align-items: center;
+        justify-content: flex-start;
+        height: calc(100vh - 4rem);
+        width: 100vw;
+        color: var(--important);
+        padding: 2rem 0rem;
+        top: 7rem;
+        left: 4rem;
+        transform: scaleX(0);
+        transform: scaleY(0);
+        right: 0; left: 0;
+    }
+
+    .header .nav-bar a, button{
+        display: block;
+    }
+
+    .header .nav-bar.active{
+        transform: scaleY(1);
+        transform: scaleX(1);
+    }
+
+    .header .nav-bar .btn{
+        margin-inline-start: 0;
+    }
+
+
+
+    .about{
+        min-width: none;
+        flex-direction: column;  
+        position: relative;
+        text-align: center;
+        padding: 0 4rem;
+        margin: auto;
+        position: relative;
+        margin-top: 6rem;
+        height: auto;
+    }
+
+    .about .about-container h3{
+        font-size: 3rem;
+    }
+    
+    .about .about-container p{
+        font-size: 1.2rem;
+    }
+
+    .about .icon-container{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-self: center;
+    }
+    
+    
+    .about .icon-container a{
+        padding: 0rem 2rem;
+    
+    }
+    #project{
+        position: relative;
+        margin-top: 0rem;
+    }
+
+    .project-container{
+        flex-wrap: wrap;
+    }
+    
+    .project-container .project-about{
+        text-align: center;
+    }
+
+
+
+
+/*TO BE EDITED*/
+
+
+    .project-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 40rem;
+        gap: 0rem;
+        margin-bottom: 4rem;
+        position: relative;
+    }
+
+    .projects .project-container .project-img{
+        margin: 0rem;
+    }
+
+    .project-container .project-about{
+        max-width: 32rem;
+        min-width: 32rem;
+        position: absolute;
+        bottom: -3.8rem;
+    }
+
+    .project-container .project-about:hover{
+        transform: none;
+    }
+
+
+
+/*projects about*/
+    
+    
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}
+
+
