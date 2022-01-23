@@ -6,12 +6,10 @@ menu_btn.addEventListener('click', showMenu);
 
 function showMenu(){
     menu_bar.classList.toggle('active');
-    console.log(Event);
    
 }
 
-// window.addEventListener("onselect", removeMenu);
+window.onscroll = ()=>{
 
-// function removeMenu(){
-//     menu_bar.classList.remove('active');
-// }
+    menu_bar.classList.remove('active');
+}
