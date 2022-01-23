@@ -5,41 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="./fontawesome-free-5.15.4-web/css/all.min.css">
+    
+    <!-- font-awesome links -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!---header section-->
         <header class="header" id="header">
-            <div class="logo-container"><h1 class="logo">M</h1></div>
+            <a href="#home"><div class="logo-container"><img class="logo" src="./images/PORTFOLIO-LOGO.png" alt="LOGO"></div></a>
         
             <div class="nav-bar">
+                    <a href="#home">Home</a>
                     <a href="#about">About</a>
                     <a href="#project">Projects</a>
-                    <a href="#work">Work</a>
+                    <a href="#contribution">Contribution</a>
                     <a href="#contact">Contact</a>
                     <button class="btn">Resume</button>
+
+                    <div class="icon-container-second">
+                        <a href="https://www.twitter.com/UkpabioStephen" class="fab fa-twitter" target="_blank"></a>
+                        <a href="https://www.linkedin.com/in/mfoniso-ukpabio-865b24207/" class="fab fa-linkedin" target="_blank"></a>
+                        <a href="instagram.com/mfoniso_upabio/" class="fab fa-instagram" target="_blank"></a>
+                        <a href="https://www.facebook.com/mfoniso.upabio" class="fab fa-facebook" target="_blank"></a>
+                        <a href="https://github.com/AirZED" class="fab fa-github" target="_blank"></a>
+                    </div>
             </div>
             <div class="fas fa-bars" id="menu-btn"></div>
         </header>
         <!---header section ends-->
 
-        <!--about section start-->
-    <section class="main-about">
-        <div class="about" id="about">
+        <!--home section start-->
+    <section class="main-home">
+        <div class="home" id="home">
             <div class="icon-container">
-                <a href="#" class="fab fa-twitter"></a>
-                <a href="#" class="fab fa-linkedin"></a>
-                <a href="#" class="fab fa-instagram"></a>
-                <a href="#" class="fab fa-pinterest"></a>
-                <a href="#" class="fab fa-github"></a>
+                <a href="https://www.twitter.com/UkpabioStephen" class="fab fa-twitter" target="_blank"></a>
+                <a href="https://www.linkedin.com/in/mfoniso-ukpabio-865b24207/" class="fab fa-linkedin" target="_blank"></a>
+                <a href="instagram.com/mfoniso_upabio/" class="fab fa-instagram" target="_blank"></a>
+                <a href="https://www.facebook.com/mfoniso.upabio" class="fab fa-facebook" target="_blank"></a>
+                <a href="https://github.com/AirZED" class="fab fa-github" target="_blank"></a>
             </div>
-            <div class="about-container">
+            <div class="home-container">
                 <p>Hi, <span>my name is</span></p>
                 <h3>Mfoniso Ukpabio</h3>
-                <p class="impt-text">Working hard to moderate life on the web</p>
-                <p>FrontEnd Developer, specialty in html, css, javasript, bootstrap, react-js. Building things for the web has
-                    been fun from the start and i wish to do it more and more as long as it adds value to life
+                <p class="impt-text">I am a Front-End Developer and Technical Writer
+                    with the passion of solving problems associated with life using the web and also learning new things.
                 </p>
             </div>
             <div class="image-container">
@@ -47,74 +58,102 @@
             </div>
         </div>
     </section>
-    <!--about section ends-->
+    <!--home section ends-->
 
-    <section id="project">
-        <h1>Some things I have built</h1>
-        <div class="projects" id="projects">
-            <div class="project-container" id="project-container">
-                <div class="project-img">
-                    <img src="./images/project.png" alt="projects">
-                </div>
-                <div class="project-about">
-                    <p class="topic">Coffee App</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non at tempora eos veniam omnis nihil! adipisicing elit. Non at tempora eos veniam omnis nihil! adipisicing elit. Non at tempora eos veniam omnis nihil!. Featured 
-                        languages are, Node-js, react-js, html, css, sass etc.
-                    </p>
-                    <a href="#" class="btn">LIVE PROJECT</a>
-                    <a href="#" class="fab fa-github"> Git-Hub</a>
-                </div>
-            </div>
 
-            <div class="project-container" id="project-container">
-                <div class="project-img">
-                    <img src="./images/project.png" alt="projects">
-                </div>
-                <div class="project-about">
-                    <p class="topic">Coffee App</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non at tempora eos veniam omnis nihil! adipisicing elit. Non at tempora eos veniam omnis nihil! adipisicing elit. Non at tempora eos veniam omnis nihil!. Featured 
-                        languages are, Node-js, react-js, html, css, sass etc.
-                    </p>
-                    <a href="#" class="btn">LIVE PROJECT</a>
-                    <a href="#" class="fab fa-github"> Git-Hub</a>
-                </div>
+    <!-- about section start -->
+    <section class="about" id="about">
+        <div class="section-topic">ABOUT <span>ME</span> </div> 
+             <div class="about-container">
+                <p class="1st-title">
+                    I am a student of Computer Engineering in the University of Uyo, Uyo.
+                </p>
+                <p> I am a self taught Front-End Developer. I work with html, css, javascript. I am also familiar with react-js.</p> 
+                <p> I enjoy working in a team as it makes work less hectic. </p> 
+                <p>Although I spend a bulk of time studing articles, attending seminars/ workshops and working on being a better developer and also explore fresh technology, I also enjoy 
+                    getting involved in indoor games and spending time brian storming with my friends</p>
+                <div class="pictures">
+                    <a href="#"><img src="./images/html (1).png" alt=""></a>
+                    <a href="#"><img src="./images/css.png" alt=""></a>
+                    <a href="#"><img src="./images/js.png" alt=""></a>
+                    <a href="#"><img src="./images/react.png" alt=""></a>
+                    <a href="#"><img src="./images/node.png" alt=""></a>
+                    <a href="#"><img src="./images/bootstrap.png" alt=""></a>
+                    
+                </div>             
             </div>
-
-            <div class="project-container" id="project-container">
-                <div class="project-img">
-                    <img src="./images/project.png" alt="projects">
-                </div>
-                <div class="project-about">
-                    <p class="topic">Coffee App</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non at tempora eos veniam omnis nihil! adipisicing elit. Non at tempora eos veniam omnis nihil! adipisicing elit. Non at tempora eos veniam omnis nihil!. Featured 
-                        languages are, Node-js, react-js, html, css, sass etc.
-                    </p>
-                    <a href="#" class="btn">LIVE PROJECT</a>
-                    <a href="#" class="fab fa-github"> Git-Hub</a>
-                </div>
-            </div>
-
-            <div class="project-container" id="project-container">
-                <div class="project-img">
-                    <img src="./images/project.png" alt="projects">
-                </div>
-                <div class="project-about">
-                    <p class="topic">Coffee App</p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non at tempora eos veniam omnis nihil! adipisicing elit. Non at tempora eos veniam omnis nihil! adipisicing elit. Non at tempora eos veniam omnis nihil!. Featured 
-                        languages are, Node-js, react-js, html, css, sass etc.
-                    </p>
-                    <a href="#" class="btn">LIVE PROJECT</a>
-                    <a href="#" class="fab fa-github"> Git-Hub</a>
-                </div>
-            </div>
-    
-            
-        </diiv>
+        </div>
         
+    </section>
+    <!-- about section ends -->
 
+
+
+
+    <!-- projects section starts -->
+    <section id="project">
+        <div class="section-topic">Some things <span>I have built</span> </div> 
+        <div class="projects">
+            <div class="project-container" id="project-container">
+                <div class="project-img">
+                    <img src="./images/project.png" alt="projects">
+                </div>
+                <div class="project-about">
+                    <a href="https://coffee-hotel-site.vercel.app/" target="blanck"><h3 class="topic">COFFEE APP</h3></a>
+                    <p> <p style="font-size: 2rem;">Description:</p>
+                        <p>A awesome site that is suppose to facilitate the faster sales of coffee. Coffee in the web!!!, easier sales via order etc.</p>
+                        <p>This project was my first project as a growing Front-End Developer. It is actually a cloned site, but building it again from scratch and having almost the same exact result made me very happy.</p>
+                        <p>My javascript discoveries during building this project facinated me alot. More room for improvement....  </p>
+                    </p>
+                    <a href="https://coffee-hotel-site.vercel.app/" class="btn" target="_blank">LIVE PROJECT</a>
+                    <a href="https://github.com/AirZED/coffee_hotel_site" class="fab fa-github" target="_blank"> Git-Hub</a>
+                </div>
+            </div>
+
+        </diiv>
+    </section>
+    
+    <section class="contribution" id="contribution">
+        <div class="section-topic"> MY <span>CONTRIBUTIONS</span> </div>
+        <div class="contribution-container">
+            <a href="https://stackoverflow.com/users/17562747/mfoniso-ukpabio" target="_blanck">
+                <div class=" contribution-child stackoverflow">
+                    <div class="fab fa-stack-overflow"></div>
+                    <h3>Stack Overflow</h3>
+                    <p>I also find pleasure in helping others in and out of the tech ecosystem. While doing this, 
+                        I am open to opportunities to learn, discover new things and new approaches to solving problems.</p>
+                </div>
+            </a>
+            <a href="https://medium.com/@ukpabiomfoniso" target="_blanck">
+                <div class="contribution-child my-blog">
+                    <div class="fas fa-blog"></div>
+                    <h3>My Blog/ Articles</h3>
+                    <p>My curiosity makes me want to know more about the how and why's behind the tools I am working with.
+                         Here I document my journey, share my findings and more.</p>
+                </div>
+            </a>
+        </div>
     </section>
 
-
+    <section class="contact" id="contact">
+       <div class="section-topic"> CONTACT</div>
+        <div class="contact-container">
+            <h3>Have a question or want us to work together?</h3>
+            <div class="name">
+                <label for="name">Name</label>
+                <input class="input" type="text" placeholder="input name...">
+            </div>
+            <div class="name">
+                <label for="name email">Email</label>
+                <input class="input" type="text" placeholder="input Email...">
+            </div>
+            <div class="name message">
+                <label for="name">Message</label>
+                <textarea class="input" type="text" placeholder="input Message..."></textarea>
+            </div>
+            <input type="submit" class="btn">
+        </div>
+    </section>
 
 
     <script src="script.js"></script>

@@ -7,7 +7,8 @@
     --border: .2rem solid rgb(3, 141, 139);
 }
 *{
-    font-family: Georgia, serif;
+    font-family:'Roboto', sans-serif;
+    letter-spacing: .018rem;
 }
 
 html{
@@ -24,6 +25,31 @@ section{
     padding: 2rem;
     position: relative;
 }
+.section-topic{
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--main-color);
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: inline-block;
+}
+.section-topic::before, .section-topic::after{
+    content: " ";
+    border-top: var(--border);
+    width: 4rem;
+    transform: translateY(-1rem);
+    display: inline-block;
+    margin: 0 .5rem;
+}
+.section-topic span{
+    color: rgb(3, 141, 139);
+}
+
+/* .section-topic::before {
+
+} */
 
 html::-webkit-scrollbar{
     width: .8rem;
@@ -48,6 +74,9 @@ body{
 #menu-btn{
     display: none;
 }
+
+
+/*STANDARD BUTTONS*/
 .btn{
     padding: .5rem 1rem;
     cursor: pointer;
@@ -63,8 +92,11 @@ body{
     color: black;
     transition: .3s linear;
 }
+/*STANDARD BUTTONS*/
 
 
+
+/*STANDARD HEADER*/
 .header{
     display: flex;
     flex-wrap: wrap;
@@ -76,26 +108,21 @@ body{
     padding: 1rem 4rem;
     top: 0; right: 0; left: 0;
     height: 7rem;
-    z-index: 1000;
+    z-index: 1200;
     border-bottom: var(--border);
+    box-shadow: 0rem .3rem 4rem 1rem black;
 }
 .header .logo-container{
     display: flex;
     align-items: center;
     justify-content: center;
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     block-size: 7rem;
     inline-size: 7rem;
-    background: rgb(3, 141, 139);
 }
 .header .logo-container .logo{
     padding: 3rem;
+    inline-size: 10rem;
 }
-.header .logo-container h1{
-    font-size: 3rem;
-    color: var(--bg);
-}
-
 .header .nav-bar a{
     color: var(--main-color);
     font-size: 1.5rem;
@@ -114,8 +141,14 @@ body{
 .header .nav-bar .btn{
     margin-inline-start: 3rem;
 }
+.icon-container-second{
+    display: none;
+}
+/*STANDARD HEADER*/
 
-.about{
+
+/*STANDARD HOME AND FRONT PAGE*/
+.home{
     position: relative;
     display: flex;
     background-color: var(--bg);
@@ -126,27 +159,28 @@ body{
     height: 100vh;  
 }
 
-.about .icon-container{
+.home .icon-container{
     display: flex;
     flex-direction: column;
     font-size: 2rem;
     align-items: flex-end;
     flex: 0;
     position: fixed;
+    z-index: 1000;
 }
 
 
-.about .icon-container a{
+.home .icon-container a{
     cursor: pointer;
     text-decoration: none;
     color: var(--main-color);
     padding: 3rem 0;
 }
 
-.about .icon-container a:hover{
+.home .icon-container a:hover{
     color: rgb(3, 141, 139);
 }
-.about .about-container{
+.home .home-container{
     min-width: 32rem;
     padding-left: 5rem;
     padding-right: 5rem;
@@ -155,19 +189,25 @@ body{
     flex: 2;
 }
 
-.about .about-container h3{
+.home .home-container h3{
     font-size: 6rem;
     color: var(--main-color);
 }
 
-.about .about-container p span{
+.home .home-container p span{
     color: rgb(3, 141, 139);
 }
-.about .about-container p{
+.home .home-container p{
     color: var(--main-color);
     font-size: 1.5rem;
 }
-.about .image-container{
+
+.home .home-container .impt-text{
+    border-bottom: var(--border);
+    box-shadow: .5rem .5rem 10rem rgb(3, 141, 139);
+    padding : 1rem 0;
+}
+.home .image-container{
     min-width: 24rem;
     min-height: 35rem;
     border-radius: 20%;
@@ -179,22 +219,80 @@ body{
 
 }
 
-.about .image-container:hover{
+.home .image-container:hover{
     transform: scale(1.3);
  }
 
- .about .image-container img{
+ .home .image-container img{
     width: 24rem;
     height: 35rem;
     border-radius: 25%;
  }
-section h1{
-    padding: 3rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    text-align: center;
-    color: var(--main-color);
-    font-family: 'Times New Roman', Times, serif;
+
+ /*STANDARD HOME AND FRONT PAGE*/
+
+ /* STANDARD ABOUT START*/
+ .about{
+     height: 100vh;
+     position: relative;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     
+ }
+
+ .about .about-container{
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     gap: 0rem;
+     position: relative;
+     background: var(--important);
+     border-radius: 2rem;
+     inline-size: 70vw;
+     text-align: left;
+     padding: 2rem;
+     border: var(--border);
+     padding-bottom: 4em;
+     box-shadow: .2rem .2rem 10rem rgb(3, 141, 139);
+
+ }
+ .about .about-container p{
+     font-size: 1.5rem;
+     color: var(--main-color);
+    
+ }
+ .about .about-container .pictures{
+     display: flex;
+     justify-content: space-around;
+     position: absolute;
+     bottom: -3rem;
+     right: 35%;
+ }
+ .about .about-container .pictures a{
+     display: block;
+     width: auto;
+     height: auto;
+     border: var(--border);
+ }
+
+ .about .about-container .pictures a img{
+     height: 5rem;
+     width: 5rem;
+ }
+
+
+ 
+ /*STANDARD ABOUT END */
+
+
+
+
+ /*STANDARD PROJECTS PAGE*/
+ #project{
+     display: flex;
+     justify-items: center;
+     flex-direction: column;
  }
 .projects{ 
     display: flex;
@@ -203,6 +301,7 @@ section h1{
     justify-content: center;
     gap: 3rem;
     margin: auto auto;
+
 }
 
 .project-container{
@@ -210,41 +309,36 @@ section h1{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 40rem;
+    height: 36rem;
     padding: 0;
 }
 
 .projects .project-container .project-img{
-    width: 38rem;
+    width: 32rem;
     height: 38rem;
     margin: 2rem;
-    background: rgb(2, 59, 58);
+    background: rgb(125, 165, 164);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .projects .project-container .project-img img{
-    width: 35rem;
+    width: 40rem;
     height: 35rem;
     padding: auto;
 }
-/*projects about*/
 
 .project-container .project-about{
-    max-width: 50rem;
-    min-width: 32rem;
+    max-width: 40vw;
+    height: auto;
     padding: 2rem;
     border: var(--border);
     background: var(--important);
-    text-align: right;
+    text-align: left;
     font-size: 1rem;
     font-weight: lighter;
     color: var(--main-color);
-}
-
-.project-container .project-about:hover{
-    transform: scale(1.3);
 }
 
 .project-container .project-about .topic{
@@ -252,12 +346,15 @@ section h1{
     font-weight: 600;
     font-size: 1.5rem;
     text-transform: capitalize;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     border-bottom: var(--border);
     border-right: var(--border);
     padding: .4rem;
     text-align: left;
     display: inline-block;
+}
+.topic p{
+    font-size: 8rem;
 }
 
 .project-container .project-about a{
@@ -277,20 +374,155 @@ section h1{
     color: var(--main-color);
 }
 
+ /*STANDARD PROJECTS PAGE*/
 
 
 
+  /*STANDARD CONTACT PAGE*/
+#contact{
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+
+}
+.contact .contact-container{
+    height: 33rem;
+    width: 30rem;
+    margin: auto auto;
+    background-color: rgb(3, 25, 47);
+    padding: 3rem;
+    border-radius: 4rem;
+    margin: 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0rem 0rem 6rem 3rem black;
+}
+.contact .contact-container p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--main-color);
+
+}
+
+.contact .contact-container label{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--main-color);
+
+}
+
+.contact .contact-container .name{
+    margin: 1rem 0;
+    
+}
+
+.contact .contact-container .message textarea[type=text] {
+    height: 4rem;
+    
+}
+
+.contact .contact-container h3{
+    color: var(--main-color);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: rgb(3, 141, 139);
+}
+.contact .contact-container .input{
+    width: 25rem;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    overflow-x: auto;
+    overflow-wrap: break-word;
+    border: var(--border);
+    border-radius: 1rem;
+}
+
+.contact .contact-container .input:active{
+    outline: none;
+    border: none;
+}
+.contact .contact-container .btn{
+    background: rgb(3, 141, 139);
+    width: 15rem;
+    text-transform:initial;
+    font-weight: 500;
+    display: block;
+}
+
+.contribution{
+    height: auto;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+}
+
+.contribution .contribution-container{
+    height: auto;
+    border: var(--border);
+    width: 70vw;
+    border-radius: 2rem;
+    background-color: var(--important);
+    box-shadow: .2rem .2rem 10rem rgb(3, 141, 139);
+    padding: 4rem 2rem;
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.contribution .contribution-container a{
+    text-decoration: none;
+}
 
 
+.contribution .contribution-container .contribution-child{
+    display: flex;
+    width: 35rem;
+    height: 30vh;
+    border: var(--border);
+    border-radius: 2rem;
+    text-align: justify;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 3rem;
+    background-color: rgb(2, 14, 26);
+    box-shadow: .5rem 2rem 5rem rgb(0, 0, 0);
+    position: relative;  
 
+}
+.contribution .contribution-container .fab, .contribution .contribution-container .fas{
+    font-size: 3rem;
+    color: rgb(3, 141, 139);
+}
+.contribution .contribution-container .contribution-child h3{
+    color: var(--main-color);
+    font-size: 1.5rem;
 
+}
 
+.contribution .contribution-container .contribution-child p{
+    color: var(--main-color);
+    font-size: 1.3rem;
+}
 
-
-
-
-
-
+ /*STANDARD CONTACT PAGE*/
 
 
 @media (max-width:750px){
@@ -305,6 +537,15 @@ section h1{
     #menu-btn:hover{
         color: var(--main-color);
     }
+    .section-topic{
+        border-bottom: var(--border);
+        justify-self: center;
+    }
+
+    .section-topic::before, .section-topic::after{
+      display: none;
+    }
+
     .header .logo-container{
         block-size: 5rem;
         inline-size: 5rem;
@@ -363,9 +604,14 @@ section h1{
         margin-inline-start: 0;
     }
 
+    .icon-container-second{
+        display: flex;
+        flex-direction: row;
+        padding: 2rem;
+    }
 
 
-    .about{
+    .home{
         min-width: none;
         flex-direction: column;  
         position: relative;
@@ -377,23 +623,24 @@ section h1{
         height: auto;
     }
 
-    .about .about-container h3{
+    .home .home-container h3{
         font-size: 3rem;
     }
     
-    .about .about-container p{
+    .home .home-container p{
         font-size: 1.2rem;
     }
 
-    .about .icon-container{
+    .home .icon-container{
         position: relative;
         display: flex;
         flex-direction: row;
         justify-self: center;
+        padding: 1rem 0;
     }
     
     
-    .about .icon-container a{
+    .home .icon-container a{
         padding: 0rem 2rem;
     
     }
@@ -408,13 +655,8 @@ section h1{
     
     .project-container .project-about{
         text-align: center;
+        min-width: 80vw;
     }
-
-
-
-
-/*TO BE EDITED*/
-
 
     .project-container{
         display: flex;
@@ -424,27 +666,57 @@ section h1{
         gap: 0rem;
         margin-bottom: 4rem;
         position: relative;
+        height: auto;
     }
 
     .projects .project-container .project-img{
         margin: 0rem;
     }
+    .projects .project-container .project-img img{
+        width: 35rem;
+        height: 38rem;
+        padding: auto;
+    }
 
     .project-container .project-about{
-        max-width: 32rem;
-        min-width: 32rem;
+        max-width: 30rem;
+        min-width: 30rem;
         position: absolute;
-        bottom: -3.8rem;
+        bottom: -8.8rem;
+        border-radius: 2rem;
     }
 
     .project-container .project-about:hover{
         transform: none;
     }
 
+    .about{
+        
+        height: auto;
+    }
 
+    .about .about-container{
+        inline-size: 80vw;
+    }
+    .about .about-container p{
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    .about .about-container .pictures{
+        inline-size: 80vw;
+        right: auto;
+        left: auto;
+    }
 
-/*projects about*/
+    .contribution .contribution-container{
+        width: 80vw;
     
+    }
+    .contribution .contribution-container .contribution-child{
+        width: 28rem;
+         
+    
+    }
     
 }
 
