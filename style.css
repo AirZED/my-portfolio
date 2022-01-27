@@ -118,10 +118,14 @@ body{
     justify-content: center;
     block-size: 7rem;
     inline-size: 7rem;
+    
 }
 .header .logo-container .logo{
-    padding: 3rem;
-    inline-size: 10rem;
+    padding: 0rem;
+    inline-size: 6rem;
+    border: var(--border);
+    border-radius: 2rem;
+    
 }
 .header .nav-bar a{
     color: var(--main-color);
@@ -551,10 +555,8 @@ body{
         inline-size: 5rem;
     }
     .header .logo-container .logo{
-        padding: 1.5rem;
-    }
-    .header .logo-container h1{
-        font-size: 2rem;
+            padding: 0rem;
+            inline-size: 4.5rem;
     }
 
     .header{
