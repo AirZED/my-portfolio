@@ -526,6 +526,33 @@ body{
     font-size: 1.3rem;
 }
 
+.scrollbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 4rem;
+    color: var(--important);
+    background-color: var(--main-color);
+    font-weight: 600;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    z-index: 1000;
+    opacity: 0;
+    
+}
+
+.scrollbtn:hover{
+    background-color: rgb(3, 141, 139);
+}
+
+#scrollbtn.showBtn{
+    opacity: 1;
+    transition: opacity 1s, transform 1s;
+}
  /*STANDARD CONTACT PAGE*/
 
 
