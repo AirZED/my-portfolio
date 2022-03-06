@@ -135,7 +135,7 @@ body{
     text-decoration: none;
 }
 
-.header .nav-bar a:hover{
+.header .nav-bar a:not(:nth-child(6)):hover{
     border-bottom: var(--border);
     padding-bottom: .8rem;
     color: rgb(3, 141, 139);
